@@ -15,6 +15,7 @@ idea
 .Python
 build/
 develop-eggs/
+.serverless
 dist/
 downloads/
 eggs/
