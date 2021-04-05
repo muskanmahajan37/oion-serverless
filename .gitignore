@@ -14,6 +14,7 @@ idea
 # Distribution / packaging
 .Python
 build/
+notebook.ipynb
 develop-eggs/
 .serverless
 dist/
