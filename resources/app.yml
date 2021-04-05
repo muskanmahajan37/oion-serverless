@@ -1,9 +1,18 @@
 app:
   handler: wsgi_handler.handler
-  layers:
-    - arn:aws:lambda:us-east-1:464889327419:layer:flask:2
   events:
-    - http: ANY /
-    - http: 'ANY {proxy+}'
-      cors:
-        origin: '*'
+    - http:
+        path: /
+        method: get
+        cors:
+          origin: '*'
+    - http:
+        path: /employees
+        method: get
+        cors:
+          origin: '*'
+    - http:
+        path: /health
+        method: get
+        cors:
+          origin: '*'
