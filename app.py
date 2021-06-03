@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def get_root():
-    return {"message": f"Hello from oion-serverless application [env:{os.getenv('ENVIRONMENT')}]"}
+    return {"message": f"Test from oion-serverless application [env:{os.getenv('ENVIRONMENT')}]"}
 
 
 @app.route("/health")

@@ -9,3 +9,4 @@ def generate_df_to_json_response(df: DataFrame):
     df_to_json = df.to_json(orient="records")
     if df_to_json:
         return Response(df_to_json, mimetype='application/json')
+    return None

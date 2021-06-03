@@ -6,7 +6,6 @@ wsgi:
   pipArgs: --no-deps
   pythonRequirements:
     slim: true
-
 domains:
   production: 'api.xypsylon.xyz'
   dev: 'devapi.xypsylon.xyz'
@@ -14,7 +13,7 @@ serverless-offline:
   useDocker: true
 customDomain:
   domainName: ${self:custom.domains.${self:provider.stage}}
-  basePath: ${self:service}
+  basePath: "employees-service"
   createRoute53Record: true
 stages:
   - production
@@ -28,6 +27,11 @@ EMPLOYEES_CSV_OBJECT_KEY:
 S3_BUCKET_NAME:
   dev: ${ssm:/S3_BUCKET_NAME_DEV~false}
   production: ${ssm:/S3_BUCKET_NAME_PROD~false}
+
+
+
+
+
 
 
 
